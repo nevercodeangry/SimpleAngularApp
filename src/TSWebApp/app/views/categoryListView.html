@@ -1,0 +1,39 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+        {{::vm.title}}
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>
+                        <button type="button"
+                                class="btn btn-primary"
+                                ng-click="vm.toggleImage()">
+                            {{vm.showImage ? "Hide" : "Show"}} Image
+                        </button>
+                    </td>
+                    <td>Category</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="category in vm.categories">
+                    <td>
+                        <img ng-if="vm.showImage"
+                             ng-src="{{category.imageUrl}}"
+                             style="width:50px;margin:2px"
+                             title="{{category.productName}}">
+                    </td>
+                    <td>
+                        <a ng-href="#categoryDetail/{{category.categoryId}}">
+                            {{ category.categoryName}}
+                        </a>
+                    </td>
+                    <td>{{ category.description }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

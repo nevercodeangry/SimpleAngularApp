@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+<body ng-app="categoryManagement">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Category Management</div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Domain Classes -->
+    <script src="app/domain/category.js"></script>
+
+    <!-- Services -->
+    <script src="app/common/services/common.js"></script>
+    <script src="app/common/services/dataAccessService.js"></script>
+    <script src="app/common/services/categoryResourceMock.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/categoryListCtrl.js"></script>
+    <script src="app/controllers/categoryDetailCtrl.js"></script>
+
+</body>
+</html>
